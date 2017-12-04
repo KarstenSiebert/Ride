@@ -1,0 +1,29 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_relative"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:layout_margin="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:layoutDirection="rtl"
+    android:paddingBottom="6dp"
+    android:paddingEnd="6dp"
+    android:paddingStart="6dp"
+    app:cardCornerRadius="5dp"
+    app:cardPreventCornerOverlap="false">
+
+    <com.nedeos.ride.details.DetailImageView
+        android:id="@+id/user_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@null"
+        android:visibility="visible"
+        tools:ignore="ContentDescription" />
+
+</android.support.v7.widget.CardView>

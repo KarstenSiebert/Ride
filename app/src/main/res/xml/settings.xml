@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fragment="com.nedeos.ride.settings.SettingsFragment"
+    android:title="@null">
+
+    <com.nedeos.ride.settings.RidePreferenceCategory android:title="@string/settings_notifications">
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="true"
+            android:key="notifications_new_message"
+            android:title="@string/settings_new_message_notifications" />
+
+        <com.nedeos.ride.settings.RideRingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:dependency="notifications_new_message"
+            android:key="notifications_new_message_ringtone"
+            android:ringtoneType="notification"
+            android:title="@string/settings_ringtone" />
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="false"
+            android:dependency="notifications_new_message"
+            android:key="notifications_new_message_vibrate"
+            android:title="@string/settings_vibrate" />
+
+    </com.nedeos.ride.settings.RidePreferenceCategory>
+
+    <com.nedeos.ride.settings.RidePreferenceCategory
+        android:dependency="notifications_new_message"
+        android:title="@string/home_messages">
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="true"
+            android:key="home_messages"
+            android:title="@string/permit_messages" />
+
+    </com.nedeos.ride.settings.RidePreferenceCategory>
+
+    <com.nedeos.ride.settings.RidePreferenceCategory
+        android:dependency="notifications_new_message"
+        android:title="@string/categories_of_interest">
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="true"
+            android:key="news_alerts"
+            android:title="@string/news_and_alerts" />
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="true"
+            android:key="travel_parking"
+            android:title="@string/travel_and_parking" />
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="true"
+            android:key="events_shows"
+            android:title="@string/events_and_shows" />
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="true"
+            android:key="shopping_sales"
+            android:title="@string/shopping_and_sales" />
+
+    </com.nedeos.ride.settings.RidePreferenceCategory>
+
+    <com.nedeos.ride.settings.RidePreferenceCategory
+        android:dependency="notifications_new_message"
+        android:title="@string/options">
+
+        <com.nedeos.ride.settings.RideSwitchPreference
+            android:defaultValue="true"
+            android:key="receive_all_locals"
+            android:title="@string/receive_all_locals" />
+
+    </com.nedeos.ride.settings.RidePreferenceCategory>
+
+    <Preference
+        android:enabled="false"
+        android:icon="@mipmap/ic_key_black"
+        android:key="app_push_key"
+        android:persistent="false"
+        android:title="@null" />
+
+</PreferenceScreen>
